@@ -1,7 +1,7 @@
 package Arrays;
 
 public class spiralArray {
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         int n = 4;
         int[][] matrix = new int[n][n];
 
@@ -41,5 +41,22 @@ public class spiralArray {
             }
             System.out.println();
         }
+    }
+
+    public static void main(String[] args) {
+        int x = 50;
+        while(true) {
+            if (x % 4 == 1) {
+                x += 2;
+            }
+            else if (x % 4 == 2) {
+                x-= 1;
+            }
+            else if (x % 4 == 3) {
+                x /= 10;
+            }
+            else break;
+        }
+        System.out.println(x);
     }
 }
